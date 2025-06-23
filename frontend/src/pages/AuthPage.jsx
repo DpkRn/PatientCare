@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const AuthPage = () => {
-    const [isLogin, setIsLogin] = React.useState(true);
-
+    const [isLogin, setIsLogin] = useState(true);
+    const navigate = useNavigate();
     const toggleForm = () => {
         setIsLogin(!isLogin);
     };
@@ -10,7 +11,9 @@ const AuthPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Handle form submission logic here
+        
         console.log("Form submitted");
+        navigate('/dashboard'); // Redirect to dashboard after submission
     }
   return (
     <div>

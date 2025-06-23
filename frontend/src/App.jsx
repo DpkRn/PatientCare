@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div>
     <Routes>
-      <Route path="/" element={<Dashboard />} />
+      <Route path="/" element={<AuthPage />} />
       <Route path="/auth" element={<AuthPage />} />
       <Route path="/dashboard" element={<Dashboard />} />
       {/* Add more routes as needed */}
